@@ -14,6 +14,13 @@ A simple front-end clone of Spotify's web player, built using HTML, CSS, and Jav
 - HTML5
 - CSS3
 - JavaScript
+## 📸 Preview
+
+![Screenshot 1](screenshot1.jpeg)
+![Screenshot 2](screenshot2.jpeg)
+![Screenshot 3](screenshot3.jpeg)
+
+
 
 ## 🎯 Getting Started
 
