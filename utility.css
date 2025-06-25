@@ -1,0 +1,399 @@
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.bg-black {
+    background-color: black;
+    color: white;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.bg-grey {
+    background-color: rgb(75, 75, 75);
+}
+
+.rounded {
+    border-radius: 7px;
+}
+
+.m-1 {
+    margin: 5px;
+}
+
+.p-1 {
+    padding: 10px;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.left {
+    width: 25vw;
+    padding: 10px;
+    background-color: #1f1f1f;
+}
+
+.right {
+    width: 75vw;
+    background-color: rgb(31 31 31);
+    margin: 16px;
+    position: relative;
+}
+
+.border {
+    border: 1px double rgb(178, 28, 28);
+    margin: 3px;
+}
+
+.home ul li {
+    width: 15px;
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding-top: 34px;
+    font-weight: bold;
+}
+
+.heading {
+    display: flex;
+    gap: 10px;
+    padding-top: 34px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.heading img {
+    width: 30px;
+}
+
+.footer {
+    display: flex;
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+    gap: 5px;
+}
+
+.library {
+    position: relative;
+    min-height: 80vh;
+}
+
+.footer a {
+    color: rgb(75, 75, 75);
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0;
+    background-color: #333333;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.header>* {
+    /* This rule was already present, but moved it inside .header for better grouping */
+}
+
+.spotifyPlaylist {
+    padding: 16px;
+}
+
+.spotifyPlaylist .card {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+    background-color: #434040;
+    flex: 1 1 250px;
+}
+
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.card>* {
+    margin-top: 3px;
+}
+
+.cardContainer {
+    display: flex;
+    gap: 10px;
+    margin: 30px;
+    flex-wrap: wrap;
+    max-height: 70vh;
+    overflow: auto;
+    overflow-x: auto;
+}
+
+
+.card {
+    position: relative;
+    transition: background-color 1s ease-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: #2c2c2c;
+}
+
+.play {
+    position: absolute;
+    right: 15px;
+    top: 140px;
+    transition: top 0.5s ease-in, opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.card:hover .play {
+    top: 197px;
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #222222;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555555;
+    border-radius: 5px;
+    border: 2px solid #222222;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #777777;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #222222;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #555555 #222222;
+}
+
+.signup {
+    background-color: #333333;
+    color: grey;
+    font-weight: bold;
+    padding-block: 0px;
+    padding-inline: 0px;
+    border-width: 0px;
+    border-style: none;
+    border-color: none;
+    border-image: none;
+}
+
+.buttons>* {
+    margin: 0 12px;
+}
+
+.signup:hover {
+    font-size: .90rem;
+    color: white;
+}
+
+.login {
+    background-color: #fffefe;
+    color: grey;
+    font-weight: bold;
+    padding-block: 0px;
+    padding-inline: 0px;
+    border-width: 0px;
+    border-style: none;
+    border-color: none;
+    border-image: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.login:hover {
+    transform: scale(1.05);
+    /* color: white; */
+    cursor: pointer;
+    font-weight: bolder;
+    color: #222222;
+
+}
+
+.playbar {
+    bottom: 0;
+    background-color: #7f7f7f;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    left: 0;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.songbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.songlist {
+    height: 644px;
+    overflow: auto;
+    margin-bottom: 44px 0;
+}
+
+.songlist ul {
+    padding: 26px 17px;
+}
+
+.songlist ul li {
+    list-style-type: decimal;
+    display: flex;
+    gap: 21px;
+    padding: 12px 0;
+    cursor: pointer;
+    border: 1px solid white;
+    margin: 12px 0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.playnow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seekbar {
+    height: 5px;
+    width: 93%;
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.circle {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    bottom: 6px;
+    left: 0;
+    transition: left .5s;
+}
+
+.songbuttons img {
+    cursor: pointer;
+}
+
+.songtime {
+    font-size: 0.8em;
+    min-width: 70px;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 15px;
+    margin-top: 6px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+
+
+@media (max-width:398px) {
+    .playbar {
+        height: 20vh;
+    }
+}
+
+@media (max-width:717px) {
+    .left {
+        width: 80vw;
+    }
+
+}
+
+@media (max-width:1300px) {
+    .left {
+        background-color: #000000;
+        position: absolute;
+        left: -100%;
+        transition: all .3s;
+        z-index: 1;
+        width: 40vw;
+    }
+
+    .right {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .hamburger {
+        display: inline;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+.volumewrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
