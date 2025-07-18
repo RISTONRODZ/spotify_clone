@@ -27,5 +27,5 @@ A simple front-end clone of Spotify's web player, built using HTML, CSS, and Jav
 1. Clone the repository:
    ```bash
    git clone https://github.com/RISTONRODZ/spotify_clone.git
-
-
+---
+### Live at :https://ristonrodz.github.io/spotify_clone/
