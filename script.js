@@ -28,7 +28,7 @@ const playMusic = (songName) => {
     currentAudio.currentTime = 0;
   }
 
-  play.src = "../img/pause.svg";
+  play.src = "img/pause.svg";
   const fullFileName = encodeURIComponent(songName + ".mp3");
   // Use currentFolder instead of hardcoded "happy"
   const url = `http://127.0.0.1:5500/spotify_clone/${currentFolder}/${fullFileName}`;
@@ -95,12 +95,12 @@ async function fetchSongsFromFolder(folder) {
 
     songul.innerHTML = `
     <li class="static-header">
-        <img class="invert" src="../img/music.svg" alt="">
+        <img class="invert" src="img/music.svg" alt="">
         <div class="info">
             <div>Song Name</div>
         </div>
         <span>Play Now</span>
-        <img class="invert" src="../img/play.svg" alt="">
+        <img class="invert" src="img/play.svg" alt="">
     </li>
 `; // Add static header
 
@@ -110,12 +110,12 @@ async function fetchSongsFromFolder(folder) {
 
       songul.innerHTML += `
         <li>
-            <img class="invert" src="../img/music.svg" alt="">
+            <img class="invert" src="img/music.svg" alt="">
             <div class="info">
                 <div>${cleanName}</div>
             </div>
             <span>Play Now</span>
-            <img class="invert" src="../img/play.svg" alt="Play">
+            <img class="invert" src="img/play.svg" alt="Play">
         </li>
     `;
     }
@@ -141,7 +141,7 @@ async function main() {
   var audio = new Audio(songs[0].url);
   const firstCleanName = cleanSongName(songs[0].url);
   playMusic(firstCleanName);
-  play.src = "../img/play.svg";
+  play.src = "img/play.svg";
 
   songul = document.querySelector(".songlist ul");
   for (const song of songs) {
@@ -150,12 +150,12 @@ async function main() {
 
     songul.innerHTML += `
         <li>
-            <img class="invert" src="../img/music.svg" alt="">
+            <img class="invert" src="img/music.svg" alt="">
             <div class="info">
                 <div>${cleanName}</div>
             </div>
 
-            <img class="invert" src="../img/play.svg" alt="Play">
+            <img class="invert" src="img/play.svg" alt="Play">
         </li>
     `;
   }
@@ -173,10 +173,10 @@ play.addEventListener("click", () => {
 
   if (currentAudio.paused) {
     currentAudio.play();
-    play.src = "../img/pause.svg";
+    play.src = "img/pause.svg";
   } else {
     currentAudio.pause();
-    play.src = "../img/play.svg";
+    play.src = "img/play.svg";
   }
 });
 //seekbar event listener
