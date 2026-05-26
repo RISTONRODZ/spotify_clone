@@ -10,12 +10,12 @@ const playlists = {
     "Drama B, SKAN - Muscle Up (feat. Drama B & Ryo) [NCS Release].mp3",
     "No Hero, Tatsunoshin - All Or Nothing [NCS Release].mp3"
   ],
-  "chill_(mood)": [
+  "Chill_(mood)": [
     "Boom Kitty, TOKYO MACHINE, Warriyo - Mortals (TOKYO MACHINE & Boom Kitty Remix) [NCS Release].mp3",
     "Chime, Teminite - Duckstep [NCS Release].mp3",
     "Drama B, SKAN - Muscle Up (feat. Drama B & Ryo) [NCS Release].mp3"
   ],
-  "dark_(mood)": [
+  "Dark_(mood)": [
     "Joyful, Фрози, Zachz Winner - Boogie [NCS Release].mp3",
     "Maestro Chives, Egzod, Neoni - Royalty [NCS Release].mp3",
     "NIVIRO - Dancinfloor Dreamer [NCS Release].mp3"
@@ -47,7 +47,7 @@ function playMusic(songName) {
   play.src = "img/pause.svg";
 
   const file = encodeURIComponent(songName + ".mp3");
-  const url = `./${currentFolder}/${file}`;
+ const url = `./${encodeURIComponent(currentFolder)}/${file}`;
 
   currentAudio = new Audio(url);
   currentAudio.play().catch(() => {});
@@ -164,13 +164,13 @@ const playlistData = [
     name: "Lofi Chill",
     description: "Relaxing beats",
     image: "cover/chill.jpg",
-    folder: "chill_(mood)"
+    folder: "Chill_(mood)"
   },
   {
     name: "Rock Anthems",
     description: "High energy rock",
     image: "cover/dark.jpg",
-    folder: "dark_(mood)"
+    folder: "Dark_(mood)"
   }
 ];
 
